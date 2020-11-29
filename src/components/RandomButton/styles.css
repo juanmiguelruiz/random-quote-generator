@@ -1,0 +1,17 @@
+.random-button {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 120%;
+  color: #4f4f4f;
+}
+
+.random-button__container{
+    padding: 3% 8%;
+}
+
+.random-icon{
+    font-size: 1.2em;
+    position: absolute;
+}

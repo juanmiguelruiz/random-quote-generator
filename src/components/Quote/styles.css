@@ -1,0 +1,16 @@
+blockquote {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.7em;
+  line-height: 120%;
+  color: #000000;
+  padding-left: 5.5rem;
+  border-left: 5px solid #f7df94;
+  padding-right: 2rem;
+}
+
+.quote__container{
+    margin-top: 7%;
+    margin-bottom: 14%;
+}
