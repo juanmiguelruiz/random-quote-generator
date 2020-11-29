@@ -8,11 +8,39 @@
   cursor: pointer;
 }
 
-.random-button__container{
-    padding: 3% 8%;
+.random-button__container {
+  padding: 3% 8%;
 }
 
-.random-icon{
-    font-size: 1.2em;
-    position: absolute;
+.random-icon {
+  font-size: 1.2em;
+  position: absolute;
+}
+
+/*Mobile*/
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .random-button__container {
+    padding: 8% 12%;
+  }
+}
+
+/*Mobile L*/
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+}
+
+/*Tablet*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/*Laptop*/
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+}
+
+/*Laptop L*/
+
+@media screen and (min-width: 1440px) {
 }

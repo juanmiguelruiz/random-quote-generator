@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useAxios from "axios-hooks";
 
-import RandomButton from "../../components/RandomButton";
 import Quote from "../../components/Quote";
 import Footer from "../../components/Footer";
 import { connect } from "react-redux";
@@ -10,7 +9,7 @@ import {selectActiveAuthor} from "../../store/author/reducer";
 const AuthorPage = ({ author}) => {
   const [quotes, setQuotes] = useState([]);
 
-  const [{ data }, refetch] = useAxios({
+  const [{ data }] = useAxios({
     method: "GET",
     url:
       `https://quote-garden.herokuapp.com/api/v2/authors/${author}?page=1&limit=10`,
