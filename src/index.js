@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import AuthorPage from './pages/AutorPage/AuthorPage';
-import MainPage from './pages/MainPage/MainPage';
+import Routes from './Routes';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <AuthorPage/>
+    <Routes/>
   </React.StrictMode>,
   document.getElementById('root')
 );

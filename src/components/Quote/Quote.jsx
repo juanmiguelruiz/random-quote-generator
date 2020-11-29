@@ -1,19 +1,20 @@
 import React from "react";
-import Author from "../Author/Author";
+import PropTypes from 'prop-types'
 
 import "./styles.css";
 
-const Quote = () => {
+const Quote = ({text}) => {
   return (
     <div className="container quote__container">
       <blockquote>
-        “The first rule of any technology used in a business is that automation
-        applied to an efficient operation will magnify the efficiency. The
-        second is that automation applied to an inefficient operation will
-        magnify the inefficiency.”
+       {text}
       </blockquote>
     </div>
   );
 };
+
+Quote.propTypes = {
+  text: PropTypes.string
+}
 
 export default Quote;

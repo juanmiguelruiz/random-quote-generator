@@ -41,10 +41,15 @@
   margin-top: 1%;
 }
 
-.author__icon {
+.author__container:hover .author__icon {
   position: relative;
-  margin-top: 3%;
+  margin-top: 1%;
   font-size: 1.78em;
+  display: inline;
+}
+
+.author__icon{
+  display: none;
 }
 
 .author__author-page {

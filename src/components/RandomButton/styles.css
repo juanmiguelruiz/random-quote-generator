@@ -5,6 +5,7 @@
   font-size: 1.2em;
   line-height: 120%;
   color: #4f4f4f;
+  cursor: pointer;
 }
 
 .random-button__container{
