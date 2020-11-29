@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import useAxios from "axios-hooks";
 
@@ -16,6 +15,7 @@ const AuthorPage = ({ author}) => {
       `https://quote-garden.herokuapp.com/api/v2/authors/${author}?page=1&limit=10`,
   });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (data) {
       setQuotes(data.quotes);

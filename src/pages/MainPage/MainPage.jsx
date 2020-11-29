@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import useAxios from "axios-hooks";
 
 import RandomButton from "../../components/RandomButton";
@@ -18,6 +18,7 @@ const MainPage = ({updateAuthor}) => {
     url: "https://quote-garden.herokuapp.com/api/v2/quotes/random",
   });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (data) {
       setQuote(data.quote.quoteText);
