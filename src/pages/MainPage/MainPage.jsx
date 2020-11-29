@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useAxios from "axios-hooks";
 
 import RandomButton from "../../components/RandomButton";
 import Quote from "../../components/Quote";
 import Footer from "../../components/Footer";
 import Author from "../../components/Author/Author";
+import updateAuthor from "../../store/author/action"
+import { connect } from "react-redux";
 
-const MainPage = () => {
+const MainPage = ({updateAuthor}) => {
   const [quote, setQuote] = useState();
   const [author, setAuthor] = useState();
   const [genre, setGenre] = useState();
@@ -21,6 +23,7 @@ const MainPage = () => {
       setQuote(data.quote.quoteText);
       setAuthor(data.quote.quoteAuthor);
       setGenre(data.quote.quoteGenre);
+      updateAuthor(author) 
     }
   });
 
@@ -36,4 +39,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default connect(null,{updateAuthor})(MainPage);
