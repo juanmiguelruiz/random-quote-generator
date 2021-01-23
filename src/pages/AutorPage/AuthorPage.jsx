@@ -12,13 +12,15 @@ const AuthorPage = ({ author}) => {
   const [{ data }] = useAxios({
     method: "GET",
     url:
-      `https://quote-garden.herokuapp.com/api/v2/authors/${author}?page=1&limit=10`,
+      `
+      https://quote-garden.herokuapp.com/api/v3/quotes?author=${author}&?page=1&limit=10`,
   });
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (data) {
-      setQuotes(data.quotes);
+      setQuotes(data.data);
+      
     }
   });
 

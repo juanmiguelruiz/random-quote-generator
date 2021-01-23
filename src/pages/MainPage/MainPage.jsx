@@ -15,15 +15,15 @@ const MainPage = ({updateAuthor}) => {
 
   const [{ data }, refetch] = useAxios({
     method: "GET",
-    url: "https://quote-garden.herokuapp.com/api/v2/quotes/random",
+    url: "https://quote-garden.herokuapp.com/api/v3/quotes/random",
   });
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (data) {
-      setQuote(data.quote.quoteText);
-      setAuthor(data.quote.quoteAuthor);
-      setGenre(data.quote.quoteGenre);
+      setQuote(data.data[0].quoteText);
+      setAuthor(data.data[0].quoteAuthor);
+      setGenre(data.data[0].quoteGenre);
       updateAuthor(author) 
     }
   });
