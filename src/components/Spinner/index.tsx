@@ -1,17 +1,9 @@
-import * as Styled from './styles';
+import { ReactElement } from 'react';
 
-export interface SpinnerProps {
-  color?: string;
-  height?: number;
-  width?: number;
-}
-
-const Spinner = ({
-  color = '#f3f3f3',
-  height = 80,
-  width = 80,
-}: SpinnerProps): JSX.Element => (
-  <Styled.Spinner color={color} height={height} width={width} />
+const Spinner = (): ReactElement => (
+  <div className="inline-block w-8 h-8">
+    <div className="w-10 h-10 m-1 border-5 border-white border-t-transparent rounded-full animate-spin"></div>
+  </div>
 );
 
 export default Spinner;

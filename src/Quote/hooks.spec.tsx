@@ -1,10 +1,10 @@
-import { renderHook, waitFor } from '@testing-library/react';
-import { useGetQuote } from './hooks';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { PropsWithChildren } from 'react';
+import { renderHook, waitFor } from '@testing-library/react';
+import { PropsWithChildren, ReactElement } from 'react';
+import { useGetQuote } from './hooks';
 const queryClient = new QueryClient();
 
-const wrapper = ({ children }: PropsWithChildren) => (
+const wrapper = ({ children }: PropsWithChildren): ReactElement => (
   <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
 );
 
