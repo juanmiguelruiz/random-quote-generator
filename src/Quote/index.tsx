@@ -1,5 +1,6 @@
 import { Shuffle, Link2 } from 'lucide-react';
 import { useCallback, useEffect, useState, ReactElement } from 'react';
+import { toast } from 'sonner';
 import { Chip, Spinner } from '../components';
 import { useGetQuote } from './hooks';
 import { type Quote } from './types';
@@ -19,6 +20,7 @@ const Quote = (): ReactElement => {
 
   const handleCopyQuote = (): void => {
     navigator.clipboard.writeText(`"${quote?.quote}". ${quote?.author}`);
+    toast.success('Quote copied to clipboard');
   };
 
   return (
@@ -32,7 +34,7 @@ const Quote = (): ReactElement => {
              max-[768px]:max-w-[250px] max-[768px]:min-w-0 random-quote-background"
           >
             <div className="flex flex-col gap-4 items-center">
-              <span className="text-sm font-medium">{quote?.author}</span>
+              <span className="text-xl font-medium">{quote?.author}</span>
               <div className="flex gap-2">
                 {quote?.tags?.map((tag: string) => <Chip key={tag}>{tag}</Chip>)}
               </div>
