@@ -36,7 +36,9 @@ const Quote = (): ReactElement => {
             <div className="flex flex-col gap-4 items-center">
               <span className="text-xl font-medium">{quote?.author}</span>
               <div className="flex gap-2">
-                {quote?.tags?.map((tag: string) => <Chip key={tag}>{tag}</Chip>)}
+                {quote?.tags?.map((tag: string) => (
+                  <Chip key={tag}>{tag}</Chip>
+                ))}
               </div>
               <span className="text-lg font-medium opacity-60 text-center">{quote?.quote}</span>
             </div>
