@@ -8,6 +8,10 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.pnpm-store
+package-lock.json
+yarn.lock
+*.tsbuildinfo
 dist
 dist-ssr
 *.local
