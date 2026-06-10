@@ -24,5 +24,11 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src", "tests", "*.config.ts", "*.config.js", "vite.config.ts", "jest.setup.js"]
+  "include": ["src", "tests", "*.config.ts", "*.config.js", "vite.config.ts", "jest.setup.js"],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ]
 }
