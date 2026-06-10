@@ -8,3 +8,4 @@ allowBuilds:
 
 minimumReleaseAgeExclude:
   - '@jmrp/lint-config@0.0.1'
+  - '@jmrp/lint-config@0.0.2'
