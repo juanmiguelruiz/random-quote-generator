@@ -5,3 +5,6 @@ allowBuilds:
   '@swc/core': true
   esbuild: true
   unrs-resolver: true
+
+minimumReleaseAgeExclude:
+  - '@jmrp/lint-config@0.0.1'

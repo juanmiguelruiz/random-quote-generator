@@ -1,5 +1,5 @@
 import { Shuffle, Link2 } from 'lucide-react';
-import { useCallback, useEffect, useState, ReactElement } from 'react';
+import { useCallback, useEffect, useState, type ReactElement } from 'react';
 import { toast } from 'sonner';
 import { Chip, Spinner } from '../components';
 import { useGetQuote } from './hooks';

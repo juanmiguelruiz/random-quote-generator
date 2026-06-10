@@ -1,5 +1,5 @@
-import { useQuery, UseQueryResult } from '@tanstack/react-query';
-import { Quote } from './types';
+import { useQuery, type UseQueryResult } from '@tanstack/react-query';
+import { type Quote } from './types';
 
 export async function getQuotes(): Promise<Quote[]> {
   const response = await fetch(

@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactElement } from 'react';
+import { type PropsWithChildren, type ReactElement } from 'react';
 
 const Chip = ({ children }: PropsWithChildren): ReactElement => (
   <div className="flex border border-indigo-700 rounded-full px-2 py-1">
